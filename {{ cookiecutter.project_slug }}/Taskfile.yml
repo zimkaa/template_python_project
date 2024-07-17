@@ -44,7 +44,7 @@ tasks:
     desc: "Generate version. Example for generate production version: task build-version -- -p"
     env:
       APP_VERSION:
-        sh: python -m src.config.builder {{.CLI_ARGS}}
+        sh: python -m src.config.builder {\{.CLI_ARGS}\}
       APP_NAME:
         sh: python -m src.config.get_name
     cmds:
@@ -54,7 +54,7 @@ tasks:
   build-docker-without-run:
     desc: "Build docker container Example: task build-docker-without-run -- '-p'"
     cmds:
-      - task build-version -- {{.CLI_ARGS}}
+      - task build-version -- {\{.CLI_ARGS}\}
       - docker compose -f docker-compose-dev.yaml --env-file ./build_version create --build
 
   run-docker:

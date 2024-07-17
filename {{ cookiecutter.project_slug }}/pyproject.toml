@@ -84,7 +84,7 @@ exclude = []
 [tool.ruff.lint.isort]
 no-lines-before = ["standard-library", "local-folder"]
 known-third-party = []
-known-local-folder = ["{{cookiecutter.pkg_name}}"]
+known-local-folder = ["{{cookiecutter.pkg_folder}}"]
 lines-after-imports = 2
 force-single-line = true
 
@@ -113,7 +113,7 @@ strict = false
 
 [tool.pyright]
 ignore = []
-include = ["{{cookiecutter.pkg_name}}"]
+include = ["{{cookiecutter.pkg_folder}}"]
 pythonVersion = "{{cookiecutter.python_version}}"
 reportInvalidTypeForm = "none"
 
@@ -121,7 +121,7 @@ reportInvalidTypeForm = "none"
 exclude = [
     # project specific
 ]
-paths = ["{{cookiecutter.pkg_name}}"]
+paths = ["{{cookiecutter.pkg_folder}}"]
 sort_by_size = true
 # min_confidence = 80
 ignore_names = [

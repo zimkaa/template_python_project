@@ -1,6 +1,6 @@
 # Template project
 
-- [ ] fix task file
+- [x] fix task file
 - [ ] chmod +x ./start_app.sh
 - [x] docker-compose-dev.yml
 - [x] docker-compose.yml

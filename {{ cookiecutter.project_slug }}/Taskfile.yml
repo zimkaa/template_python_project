@@ -44,9 +44,9 @@ tasks:
     desc: "Generate version. Example for generate production version: task build-version -- -p"
     env:
       APP_VERSION:
-        sh: python -m src.config.builder {\{.CLI_ARGS}\}
+        sh: python -m {{cookiecutter.pkg_folder}}.config.builder {{cookiecutter._open_brackets}}{{cookiecutter._cli_args}}{{cookiecutter._close_brackets}}
       APP_NAME:
-        sh: python -m src.config.get_name
+        sh: python -m {{cookiecutter.pkg_folder}}.config.get_name
     cmds:
       - sed -i '.bak' -e "s/^APP_VERSION=.*/APP_VERSION=${APP_VERSION}/; s/^APP_NAME=.*/APP_NAME=${APP_NAME}/" build_version
       - echo "build version set up APP_VERSION=${APP_VERSION} APP_NAME=${APP_NAME}"
@@ -54,7 +54,7 @@ tasks:
   build-docker-without-run:
     desc: "Build docker container Example: task build-docker-without-run -- '-p'"
     cmds:
-      - task build-version -- {\{.CLI_ARGS}\}
+      - task build-version -- {{cookiecutter._open_brackets}}{{cookiecutter._cli_args}}{{cookiecutter._close_brackets}}
       - docker compose -f docker-compose-dev.yaml --env-file ./build_version create --build
 
   run-docker:

@@ -6,6 +6,9 @@
   "description": "Short Project description",
   "author_name": "Anton Zimin",
   "author_email": "example@example.net",
+  "_open_brackets": "{{",
+  "_close_brackets": "}}",
+  "_cli_args": ".CLI_ARGS",
   "__prompts__": {
     "package_name": "Select your project name",
     "project_slug": "Project directory",

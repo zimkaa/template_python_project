@@ -25,7 +25,6 @@ repos:
     rev: v4.6.0
     hooks:
       - id: trailing-whitespace
-        exclude: src/fight/example
         exclude_types:
           - markdown
       - id: check-added-large-files

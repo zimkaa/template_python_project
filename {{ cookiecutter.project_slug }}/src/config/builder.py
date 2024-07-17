@@ -3,8 +3,8 @@ from datetime import datetime
 from datetime import timezone
 from pathlib import Path
 
-from src.config import settings
-from src.config.constants import README_PATH
+from {{cookiecutter.pkg_name}}.config import settings
+from {{cookiecutter.pkg_name}}.config.constants import README_PATH
 
 
 class Build:

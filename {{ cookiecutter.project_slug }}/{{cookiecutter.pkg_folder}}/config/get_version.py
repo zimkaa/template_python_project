@@ -4,7 +4,7 @@ from .project_info import get_version
 
 
 def main() -> None:
-    sys.stdout.write(f"{get_version()}\\n")
+    sys.stdout.write(f"{get_version()}")
 
 
 if __name__ == "__main__":

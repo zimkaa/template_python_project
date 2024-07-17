@@ -170,6 +170,7 @@ cython_debug/
 *.log.*
 .DS_Store
 test.py
+.pre-commit-config.yaml
 
 .vscode/
 logs/

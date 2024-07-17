@@ -35,7 +35,7 @@ class Build:
 
 def main(*, production: bool = False) -> None:
     build = Build(production=production)
-    sys.stdout.write(f"{build.get_version()}\\n")
+    sys.stdout.write(f"{build.get_version()}")
 
 
 if __name__ == "__main__":

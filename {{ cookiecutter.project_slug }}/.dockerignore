@@ -17,6 +17,7 @@ logs/
 test.py
 .python-version
 .pre-commit-config.yaml
+.pre-commit-config.yaml.template
 .DS_Store
 
 # dotenv

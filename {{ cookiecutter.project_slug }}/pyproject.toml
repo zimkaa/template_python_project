@@ -9,20 +9,12 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = "^{{cookiecutter.python_version}}"
 
-[tool.poetry.group.test.dependencies]
-pytest = "^7.4.3"
-pytest-cov = "^4.1.0"
-pytest-asyncio = "^0.23.7"
-
-[tool.poetry.group.dev.dependencies]
-
-
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.pytest.ini_options]
-addopts = "-rsxX -l --tb=short --strict-markers --doctest-modules"
+addopts = "-vvv -rsxX -l --tb=short --strict-markers --doctest-modules"
 asyncio_mode="auto"
 cache_dir = "/tmp/pytest_cache"
 python_files = "test*.py"
@@ -90,7 +82,7 @@ force-single-line = true
 
 [tool.ruff.lint.extend-per-file-ignores]
 "tests/*.py" = ["ANN101", "S101", "S311"]
-"logger/custom.py" = ["A003"]
+"logger/custom.py" = ["A003", "PERF403"]
 
 [tool.ruff.format]
 quote-style = "double"

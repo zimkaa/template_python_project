@@ -88,7 +88,7 @@ tasks:
       - poetry install
       - poetry run pip install -U pip
       - poetry add pydantic pydantic-settings tomli sentry-sdk pyyaml
-      - poetry add -G test pytest pytest-cov pytest-mock pytest-asyncio
+      - poetry add -G test pytest pytest-cov pytest-mock pytest-asyncio pytest-randomly pytest-xdist hypothesis
       - poetry add -G dev pre-commit ruff mypy vulture
       - chmod +x ./start_app.sh
       - git init
